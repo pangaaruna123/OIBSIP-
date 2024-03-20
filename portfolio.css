@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+body{
+   background: lightblue;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+
+}
+.main{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow:0 35px 55px rgba(0, 0, 0, 0.1);
+
+}
+.main .left-side{
+    position: relative;
+    background-color: #003347;
+    padding: 40px;
+
+}
+.portfolio-text{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255,255, 0.2);
+    
+}
+.portfolio-text .imgbox{
+    position: relative;
+    
+    width:200px ;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+
+
+}
+.portfolio-text .imgbox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.portfolio-text h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+
+}
+.portfolio-text h2 span{
+font-size: 0.8em;
+font-weight: 300;
+}
+.contactinfo{
+    padding-top: 20px;
+}
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactinfo ul{
+    position: relative;
+}
+.contactinfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+
+}
+.contactinfo ul li .icon{
+    display: inline-block;
+    width:30px;
+    font-size: 10px;
+    color: lightskyblue;
+
+}
+.contactinfo ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+.contactinfo.education li{
+   margin-bottom: 15px;
+}
+.contactinfo.education h5{
+    color: aqua;
+    font-weight: 500;
+ }
+ .contactinfo.education h4:child(2){
+    color: #fff;
+    font-weight: 500;
+
+ }
+ .contactinfo.education h4{
+    color: #fff;
+    font-weight: 300;
+ }
+ .contactinfo.language .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: lightslategray;
+    display: block;
+    margin-top: 5px;
+ }
+ .contactinfo.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: lavenderblush;
+
+ }
+.main .right-side{
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+
+}
+.portfolio-text{
+    position:relative;
+
+}
+.about{
+  margin-bottom: 50px;
+
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #333;
+}
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year_company{
+min-width: 150px;
+}
+.about .box .year_company h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.about .box .text h4{
+    text-transform: uppercase;
+    color: lightblack;
+    font-size: 16px;
+
+}
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4{
+    text-transform: uppercase;
+    color:  #003147;
+    font-weight: 500;
+
+
+}
+.skills .box .percent
+{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: lightgray;
+
+}
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:#333 ;
+}
+/*.softskills  h2{
+
+text-transform: uppercase;
+    color: #003147;
+    font-weight: 500;
+}*/
+.softskills ul{
+  display: grid;
+}
+.softskills ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.softskills ul li .text{
+    font-size:15px ;
+    color: #003147;
+    width: 20px;
+
+}
+/*.hobbies h2{
+    text-transform: uppercase;
+    color: #003147;
+    font-weight: 500;
+}*/
+.hobbies ul{
+    display: grid;
+  }
+.hobbies ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.hobbies ul li .text{
+    font-size:15px ;
+    color: #003147;
+    width: 20px;
+}
+@media (max-width:300px){
+    .main{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
+@media (max-width:100px){
+    .main{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .year_company{
+        min-width: 150px;
+    margin-bottom: 5px;
+    }
+    .skills .box .percent div
+{
+    grid-template-columns: repeat(1,1fr);
+    min-width: 150px;
+    margin-bottom: 5px;
+}
+
+    
+}
